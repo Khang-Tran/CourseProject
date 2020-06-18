@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!-- for azure:  all these links must use https, not http -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Car Garage</title>
+  <link rel="stylesheet" type="text/css" href="public/stylesheets/style.css"/>
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css"/>
+  <script src="https://code.jquery.com/jquery-1.8.2.min.js"> </script>
+  <script src="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+  <script src="main.js"></script>
+ </head>
+
+ <body>
+
+
+<!-- Start of  page ------------------------------------------------------------------>
+<div data-role="page"  id="home">
+
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>List of Cars</h1>
+      <div data-role="navbar"  data-theme='b'>
+        <ul>
+          <li><a href="#show">See the list</a></li>
+          <li><a href="#addDelete">Add or Delete</a></li>
+        </ul>
+      </div><!-- /navbar -->
+    </div>
+  
+    <!--   page content -->
+    <div data-role="content" data-theme='b'>
+      <div class="newFont">
+        <h2>Keep Track of your Cars</h2>
+      </div>
+      <img src="./public/images/garage.jpeg"  class="center" alt="car garage" style="width:468px;height:313px;">
+    </div>
+  
+    <!--  page footer -->
+      <div data-role="footer" data-theme='b'>
+      <h1>Copyrigtht 2020 by Kurt L Friedrich</h1>
+    </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+  
+<!-- Start of  page ------------------------------------------------------------------>
+<div data-role="page"  id="show">
+
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>Here is all the Cars</h1>
+      <div data-role="navbar"  data-theme='b'>
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#addDelete">Add or Delete</a></li>
+          <p id="IDparmHere" hidden></p>
+        </ul>
+      </div><!-- /navbar -->
+    </div>
+  
+    <!--   page content -->
+    <div data-role="content" data-theme='b'>
+      <div class="newFont1">
+        <h2>Garage</h2>
+        Click on your cars to see the full details.<br>
+        <ul id="carList"></ul>
+      </div>
+    </div>
+  
+    <!--  page footer -->
+      <div data-role="footer" data-theme='b'>
+      <h1>Copyrigtht 2020 by Kurt Friedrich</h1>
+    </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+  
+  
+<!-- Start of  page ------------------------------------------------------------------>
+<div data-role="page"  id="addDelete">
+
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>Add or Delete Your Cars</h1>
+      <div data-role="navbar"  data-theme='b'>
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#show">See the list</a></li>
+        </ul>
+      </div><!-- /navbar -->
+    </div>
+  
+    <!--   page content -->
+    <div data-role="content" data-theme='b'>
+      <div class="newFont1">
+        <h2>Enter another Car</h2>
+        Enter Car Make <br />
+        <input type="text" value="" id="Make" />
+        Enter Car Model <br />
+        <input type="text" value="" id="Model" />
+        Enter The Year You Bought it <br />
+        <input type="text" value="" id="Year" />
+        Enter Average MPG <br />
+        <input type="text" value="" id="MPG" />
+        Enter the Car's Milage <br />
+        <input type="text" value="" id="Milage" />    
+        <input type="button" value="Click To Add Car" id="buttonAdd"  data-inline="true" />
+        <input type="button" value="Clear Data" id="buttonClear"  data-inline="true" />
+      </div>
+    </div>
+
+    <div>
+      Enter the Car ID to delete from list <br />
+      <input type="text" value="" id="deleteID" />
+      <input type="button" value="Click To Delete" id="buttonDelete"  data-inline="true" />
+
+    </div>
+  
+    <!--  page footer -->
+      <div data-role="footer" data-theme='b'>
+      <h1>Copyrigtht 2020 by Kurt Friedrich</h1>
+    </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+  
+  
+<!-- Start of  page ------------------------------------------------------------------>
+<div data-role="page"  id="details">
+
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <h1>More Information on the Car</h1>
+      <div data-role="navbar"  data-theme='b'>
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#show">See the list</a></li>
+          <li><a href="#addDelete">Add or Delete</a></li>
+        </ul>
+      </div><!-- /navbar -->
+    </div>
+  
+    <!--   page content -->
+    <div data-role="content" data-theme='b'>
+      <div class="newFont">
+        <h2> Here are the details</h2>
+        <p id="oneMake"></p>
+        <p id="oneModel"></p>
+        <p id="oneYear"></p>
+        <p id="oneMPG"></p>
+        <p id="oneMilage"></p>
+      </div>
+    </div>
+  
+    <!--  page footer -->
+      <div data-role="footer" data-theme='b'>
+      <h1>Copyrigtht 2020 by Kurt Friedrich</h1>
+    </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+  
+
+
+ </body>
+ </html> 
